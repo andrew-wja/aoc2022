@@ -1,0 +1,21 @@
+name:                aoc2022
+version:             0.1.0.0
+github:              "andrew-wja/aoc2022"
+license:             BSD3
+author:              "Andrew Anderson"
+maintainer:          "aanderso@tcd.ie"
+copyright:           "2022 Andrew Anderson"
+synopsis:            Advent of Code 2022 problem solutions
+description:         Please see the README on GitHub at <https://github.com/andrew-wja/aoc2022#readme>
+
+dependencies:
+- base >= 4.7
+
+executables:
+  problem-1:
+    main:               Main.hs
+    source-dirs:        problems/1
+    dependencies:	[]
+    ghc-options:
+    - -O2
+    - -rtsopts

@@ -1,0 +1,7 @@
+resolver: lts-20.2
+
+packages:
+- .
+
+extra-deps:
+
