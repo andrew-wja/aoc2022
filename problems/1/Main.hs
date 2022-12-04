@@ -8,16 +8,18 @@ import Data.List (span, null, sort)
 chunk [] = []
 chunk lines =
   let (piece, rest) = span (not . null) lines
-  in (piece:(chunk $ drop 1 rest))
+  in (piece:(chunk $ drop 1 rest)) -- drop the separator so you don't spin on it endlessly!
 
 main = do
   args <- getArgs
   contents <- readFile (args !! 0)
+
   let chunks = chunk $ lines contents
   let chunksOfInts :: [[Int]] = map (map read) chunks
   let summedChunks = map sum chunksOfInts
   putStrLn "Part 1:"
   putStrLn $ show $ maximum summedChunks
+
   let sortedTotals = reverse $ sort summedChunks -- sort defaults to ascending order
   let top3 = take 3 sortedTotals
   putStrLn "Part 2:"
