@@ -12,10 +12,18 @@ dependencies:
 - base >= 4.7
 
 executables:
-  problem-1:
+  day-1:
     main:               Main.hs
-    source-dirs:        problems/1
-    dependencies:	[]
+    source-dirs:        problems/day-1
+    dependencies:       []
+    ghc-options:
+    - -O2
+    - -rtsopts
+
+  day-2:
+    main:               Main.hs
+    source-dirs:        problems/day-2
+    dependencies:       [split]
     ghc-options:
     - -O2
     - -rtsopts
