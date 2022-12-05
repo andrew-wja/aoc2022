@@ -27,3 +27,11 @@ executables:
     ghc-options:
     - -O2
     - -rtsopts
+
+  day-3:
+    main:               Main.hs
+    source-dirs:        problems/day-3
+    dependencies:       [containers]
+    ghc-options:
+    - -O2
+    - -rtsopts
